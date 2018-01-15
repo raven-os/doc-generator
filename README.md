@@ -1,8 +1,8 @@
 # Raven PDF Generator
 
-This project is indented to help generate PDF files from Markdown.
+This project aims to facilitate the creation of Raven stylized PDF files from Markdown.
 
-It uses Pandoc with a custom template modified from [this one](https://github.com/Wandmalfarbe/pandoc-latex-template).
+It uses Pandoc with a modified template from [this one](https://github.com/Wandmalfarbe/pandoc-latex-template).
 
 ## Requirement
 
@@ -19,19 +19,19 @@ pip install -r ./requirement.txt
 
 ## Howto
 
-To generate a pdf from a markdown file, simply type:
+To generate a pdf document from a markdown file:
 
 ```bash
 ./doc-generator.py -f input.md output.pdf
 ```
 
-Or to generate it from an url:
+To generate a pdf document from an an url:
 
 ```bash
 ./doc-generator.py -u http://input.md output.pdf
 ```
 
-The document must start with some metadatas following the given model:
+The document must start with some metadata that must follow this pattern:
 
 ```yaml
 ---
@@ -39,20 +39,20 @@ title: "Document Title"
 accountant: [John Doe]
 version: 1.0.0
 history: [
-	{
-		author: "John Doe",
-		date: "27 Oct 2017",
-		version: "1.0.0",
-		sections: "All document",
-		comments: "Fixed some typos",
-	},
-	{
-		author: "John Doe",
-		date: "28 Oct 2018",
-		version: "1.1.0",
-		sections: "1.3",
-		comments: "Added section 1.3: installation guide",
-	},
+        {
+                author: "John Doe",
+                date: "27 Oct 2017",
+                version: "1.0.0",
+                sections: "All document",
+                comments: "Fixed some typos",
+        },
+        {
+                author: "John Doe",
+                date: "28 Oct 2018",
+                version: "1.1.0",
+                sections: "1.3",
+                comments: "Added section 1.3: installation guide",
+        },
 ]
 ...
 
