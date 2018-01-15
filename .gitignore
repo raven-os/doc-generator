@@ -106,8 +106,7 @@ venv.bak/
 # Vim
 *.vim
 
-# Input/Output files
-*.md
+# Output files
 *.pdf
 
 # Test files
