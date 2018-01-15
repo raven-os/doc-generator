@@ -1,0 +1,2 @@
+panflute==1.10.3
+pygraphviz==1.3.1
