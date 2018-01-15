@@ -630,7 +630,7 @@ $endif$
 \vskip 0.5em
 \noindent
 \begin{tabularx}{\textwidth}{llX} \toprule
-    \textbf{Title                } &:& Raven $title$                     \\
+    \textbf{Title                } &:& $title$                           \\
     \textbf{Modification date    } &:& \today                            \\
     \textbf{Accountant           } &:& $accountant$                      \\
     \textbf{E-mail               } &:& raven\_2020@labeip.epitech.eu     \\
