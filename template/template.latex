@@ -584,7 +584,7 @@ $endif$
 \lhead{\includegraphics[width=2cm]{template/logo-r.png}}
 \chead{}
 \rhead{$title$}
-\lfoot{{\jobname}.pdf}
+\lfoot{Raven}
 \cfoot{\today}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
