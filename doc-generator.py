@@ -47,6 +47,7 @@ class Build(object):
             self.args.output,
             '--from=markdown',
             '--template=template/template.latex',
+            '--filter=filters/pandoc-abstract.py',
             '--filter=filters/pandoc-graphviz.py',
             '--filter=filters/pandoc-code.py',
             '--listings',
@@ -69,7 +70,10 @@ class Build(object):
             sys.exit(1)
 
 def gen_randpath():
-    return TMP_DIR + ''.join(random.choices(string.ascii_letters + string.digits, k=10)) + '.md'
+    out = TMP_DIR
+    for i in range(0, 10):
+        out += ''.join(random.choice(string.ascii_letters + string.digits))
+    return out + '.md'
 
 def parse_args():
     """

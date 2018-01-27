@@ -14,6 +14,14 @@ import random
 import string
 import sys
 
+TMP_DIR='/tmp/doc-generator/'
+
+def gen_randpath():
+    out = TMP_DIR
+    for i in range(0, 10):
+        out += ''.join(random.choice(string.ascii_letters + string.digits))
+    return out + '.pdf'
+
 def gen_randstr():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=10))
 
@@ -23,7 +31,7 @@ def graphviz_filter(elem, doc):
         graph = pygraphviz.AGraph(string=code)
         title = graph.graph_attr.pop('label', '')
         graph.layout()
-        path = '/tmp/doc-generator/' + gen_randstr() + '.pdf'
+        path = gen_randpath()
         graph.draw(path, prog='dot')
         para = pf.Para(pf.Image(pf.Str(title), title='fig:', url=path))
         return para

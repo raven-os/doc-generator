@@ -54,8 +54,23 @@ history: [
                 comments: "Added section 1.3: installation guide",
         },
 ]
+lang: fr-FR
 ...
 
+```
+
+The document can contain an abstract between the `Abstract` and `EndAbstract` headers:
+
+```markdown
+#Abstract
+
+This is the abstract of the document
+
+#EndAbstract
+
+#1. Part One
+
+Content of part one
 ```
 
 ## Bugs?

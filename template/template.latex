@@ -584,7 +584,7 @@ $endif$
 \lhead{\includegraphics[width=2cm]{template/logo-r.png}}
 \chead{}
 \rhead{$title$}
-\lfoot{Raven}
+\lfoot{$outputfile$}
 \cfoot{\today}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -613,8 +613,6 @@ $endif$
     \Huge \textbf{$title$}
     \vskip 1em
     \end{center}
-    \textbf{Abstract}\\
-    Raven is a free and open-source operating system. By asking the user what's his technical level and his interests, Raven can adapt to him and modify the interfaces of software and turn phrases used accordingly, with the aim of reducing his frustration.
     \vfill
 }
 \end{titlepage}
@@ -624,18 +622,41 @@ $endif$
 %%
 
 %%
+%% Abstract
+%%
+
+$if(abstract)$
+
+\leavevmode \\
+\Large\textbf{Résumé}
+\vskip 0.5em
+\noindent
+\normalsize
+$for(abstract)$
+$abstract$
+\leavevmode \\
+$endfor$
+
+\clearpage
+$endif$
+
+%%
+%% Abstract
+%%
+
+%%
 %% begin document description
 %%
-\textbf{Document Description}
+\textbf{Déscription du document}
 \vskip 0.5em
 \noindent
 \begin{tabularx}{\textwidth}{llX} \toprule
-    \textbf{Title                } &:& $title$                           \\
-    \textbf{Modification date    } &:& \today                            \\
-    \textbf{Accountant           } &:& $accountant$                      \\
+    \textbf{Titre                } &:& $title$                           \\
+    \textbf{Objet                } &:& Raven -- $title$                  \\
+    \textbf{Date de modification } &:& \today                            \\
+    \textbf{Auteur               } &:& $accountant$                      \\
     \textbf{E-mail               } &:& raven\_2020@labeip.epitech.eu     \\
-    \textbf{Subjet               } &:& Raven -- $title$                  \\
-    \textbf{Document version     } &:& $version$                         \\
+    \textbf{Version du document  } &:& $version$                         \\
     \bottomrule
 \end{tabularx}
 
@@ -648,12 +669,12 @@ $endif$
 %%
 %% begin revision table
 %%
-\textbf{Revision Table}
+\textbf{Tableau des révisions}
 \vskip 0.5em
 \noindent
-\begin{tabularx}{\textwidth}{l P{3cm} l P{3.5cm} >{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{l P{2.75cm} l P{3.70cm} >{\raggedright\arraybackslash}X}
     \toprule
-    \textbf{Date}& \textbf{Authors}& \textbf{Version}& \textbf{Modified Section(s)}& \textbf{Comment(s)} \\
+    \textbf{Date}& \textbf{Auteurs}& \textbf{Version}& \textbf{Section(s) Modifiée(s)}& \textbf{Commentaire(s)} \\
     $for(history)$
         \midrule
         $history.date$&$history.author$&$history.version$&$history.sections$&$history.comments$\\
@@ -670,7 +691,7 @@ $endif$
 \clearpage
 
 %%
-%% begin summary
+%% begin table of contents
 %%
 \tableofcontents
 
@@ -679,72 +700,14 @@ $endif$
 \rfoot{\thepage} %% Add number at end of page
 
 %%
-%% end summary
+%% end table of contents
 %%
 
 %%
 %% Body
 %%
 
-$for(include-before)$
-$include-before$
-
-$endfor$
-$if(toc)$
-$if(beamer)$
-\begin{frame}
-\tableofcontents[hideallsubsections]
-\end{frame}
-$else$
-{
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
-$endif$
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
 $body$
-
-$if(natbib)$
-$if(bibliography)$
-$if(biblio-title)$
-$if(book-class)$
-\renewcommand\bibname{$biblio-title$}
-$else$
-\renewcommand\refname{$biblio-title$}
-$endif$
-$endif$
-$if(beamer)$
-\begin{frame}[allowframebreaks]{$biblio-title$}
-\bibliographytrue
-$endif$
-\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
-$if(beamer)$
-\end{frame}
-$endif$
-
-$endif$
-$endif$
-$if(biblatex)$
-$if(beamer)$
-\begin{frame}[allowframebreaks]{$biblio-title$}
-\bibliographytrue
-\printbibliography[heading=none]
-\end{frame}
-$else$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-$endif$
-
-$endif$
-$for(include-after)$
-$include-after$
-$endfor$
 
 %%
 %% End body
