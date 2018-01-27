@@ -50,6 +50,8 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage{pdflscape}
+
 $if(beamer)$
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -583,8 +585,8 @@ $endif$
 \fancyfoot{}
 \lhead{\includegraphics[width=2cm]{template/logo-r.png}}
 \chead{}
-\rhead{$title$}
-\lfoot{$outputfile$}
+\rhead{\includegraphics[width=2cm]{template/epitech.png}}
+\lfoot{$title$}
 \cfoot{\today}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -609,17 +611,23 @@ $endif$
     \vfill
     \includegraphics[width=4.8in]{template/logo-r.png}
     \vskip 1em
-    \fontsize{28}{40}
-    \Huge \textbf{$title$}
+    \fontsize{28}{50}
+    \Huge \textbf{Raven}\\
     \vskip 1em
-    \end{center}
+    \fontsize{28}{40}
+    \huge \textbf{$title$}\\
     \vfill
+    \end{center}
 }
 \end{titlepage}
 
 %%
 %% end titlepage
 %%
+
+\setcounter{page}{2}
+\renewcommand{\thepage}{\Roman{page}} % Roman numbers for page counter
+\rfoot{\thepage}
 
 %%
 %% Abstract
@@ -696,6 +704,7 @@ $endif$
 \tableofcontents
 
 \clearpage
+\renewcommand{\thepage}{\arabic{page}} % Roman numbers for page counter
 \setcounter{page}{1}
 \rfoot{\thepage} %% Add number at end of page
 
