@@ -655,7 +655,7 @@ $endif$
 %%
 %% begin document description
 %%
-\textbf{Déscription du document}
+\textbf{Description du document}
 \vskip 0.5em
 \noindent
 \begin{tabularx}{\textwidth}{llX} \toprule
@@ -682,7 +682,7 @@ $endif$
 \noindent
 \begin{tabularx}{\textwidth}{l P{2.75cm} l P{3.70cm} >{\raggedright\arraybackslash}X}
     \toprule
-    \textbf{Date}& \textbf{Auteurs}& \textbf{Version}& \textbf{Section(s) Modifiée(s)}& \textbf{Commentaire(s)} \\
+    \textbf{Date}& \textbf{Auteur}& \textbf{Version}& \textbf{Section(s) Modifiée(s)}& \textbf{Commentaire(s)} \\
     $for(history)$
         \midrule
         $history.date$&$history.author$&$history.version$&$history.sections$&$history.comments$\\
