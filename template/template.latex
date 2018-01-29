@@ -583,9 +583,9 @@ $endif$
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\lhead{\includegraphics[width=2cm]{template/logo-r.png}}
+\lhead{\includegraphics[height=1cm]{template/logo-r.png}}
 \chead{}
-\rhead{\includegraphics[width=2cm]{template/epitech.png}}
+\rhead{\includegraphics[height=1cm]{template/epitech.png}}
 \lfoot{$title$}
 \cfoot{\today}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -611,11 +611,11 @@ $endif$
     \vfill
     \includegraphics[width=4.8in]{template/logo-r.png}
     \vskip 1em
-    \fontsize{28}{50}
-    \Huge \textbf{Raven}\\
+    \Huge \textbf{Raven}
     \vskip 1em
-    \fontsize{28}{40}
     \huge \textbf{$title$}\\
+    \vskip 2em
+    \includegraphics[width=1in]{template/epitech.png}
     \vfill
     \end{center}
 }
@@ -662,7 +662,15 @@ $endif$
     \textbf{Titre                } &:& $title$                           \\
     \textbf{Objet                } &:& Raven -- $title$                  \\
     \textbf{Date de modification } &:& \today                            \\
-    \textbf{Auteur               } &:& $accountant$                      \\
+    \textbf{Auteurs              } &:& Benjamin Grange \\
+                                   && Flora Huot \\
+                                   && Jakob Kellendonk \\
+                                   && Louis Guittard \\
+                                   && Jean Plancher \\
+                                   && Dorian Trubelle \\
+                                   && Mickael Bourgois \\
+                                   && Vincent Riamon \\
+                                   && Matteo Melis \\
     \textbf{E-mail               } &:& raven\_2020@labeip.epitech.eu     \\
     \textbf{Version du document  } &:& $version$                         \\
     \bottomrule
