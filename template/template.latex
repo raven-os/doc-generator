@@ -169,7 +169,7 @@ $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
 \usepackage{xcolor}
-\definecolor{default-urlcolor}{HTML}{0099FF}
+\definecolor{default-urlcolor}{HTML}{ED254E}
 \usepackage{hyperref}
 \hypersetup{
     $if(title-meta)$
@@ -407,8 +407,7 @@ $endif$
 \definecolor{listing-rule}{HTML}{B3B3B3}
 \definecolor{listing-numbers}{HTML}{B3B3B3}
 \definecolor{listing-text-color}{HTML}{24292e}
-\definecolor{listing-keyword}{HTML}{d73a49} % 435489
-\definecolor{listing-string}{HTML}{032f62}
+\definecolor{listing-keyword}{HTML}{d73a49}
 \definecolor{listing-comment}{HTML}{6a737d}
 
 %
@@ -583,7 +582,7 @@ $endif$
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\lhead{\includegraphics[height=1cm]{template/logo-r.png}}
+\lhead{\includegraphics[height=1cm]{template/raven.png}}
 \chead{}
 \rhead{\includegraphics[height=1cm]{template/epitech.png}}
 \lfoot{$title$}
@@ -609,11 +608,9 @@ $endif$
     \begin{center}
     \noindent
     \vfill
-    \includegraphics[width=4.8in]{template/logo-r.png}
+    \includegraphics[width=4.8in]{template/raven-title-black.png}
     \vskip 1em
-    \Huge \textbf{Raven}
-    \vskip 1em
-    \huge \textbf{$title$}\\
+    \Huge \textbf{$title$}\\
     \vskip 2em
     \includegraphics[width=1in]{template/epitech.png}
     \vfill
@@ -671,6 +668,7 @@ $endif$
                                    && Mickael Bourgois \\
                                    && Vincent Riamon \\
                                    && Matteo Melis \\
+                                   && Melvin Personnier \\
     \textbf{E-mail               } &:& raven\_2020@labeip.epitech.eu     \\
     \textbf{Version du document  } &:& $version$                         \\
     \bottomrule
