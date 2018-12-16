@@ -25,7 +25,7 @@ To generate a pdf document from a markdown file:
 ./doc-generator.py -f input.md output.pdf
 ```
 
-To generate a pdf document from an an url:
+To generate a pdf document from an url:
 
 ```bash
 ./doc-generator.py -u http://input.md output.pdf
